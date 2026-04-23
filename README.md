@@ -3,10 +3,10 @@
 A fully responsive Invoice Management Application matching the Frontend Mentor Invoice App Figma design, built with React + TypeScript.
 
 ## Live Demo
-[Add your Vercel/Netlify URL here]
+https://hng-stage2-invoice-app-murex.vercel.app/
 
 ## GitHub Repo
-[Add your GitHub URL here]
+https://github.com/Tapetal/hng-stage2-invoice-app
 
 ---
 
