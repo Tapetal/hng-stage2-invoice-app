@@ -567,18 +567,25 @@ input, select, textarea { font-family: var(--font); }
 }
 .drawer.open { transform: translateX(0); }
 
-/* On tablet+, drawer sits beside the sidebar — starts at sidebar edge */
+/* On tablet+, drawer sits beside the sidebar with fixed width */
 @media (min-width: 768px) {
   .drawer {
-    left: 0;
-    width: min(calc(80px + 560px), 100vw);
-    padding-left: 0;
+    left: var(--sidebar);
+    width: 560px;
+    transform: translateX(calc(-560px - var(--sidebar)));
+  }
+  .drawer.open {
+    transform: translateX(0);
   }
 }
 
 @media (min-width: 1024px) {
   .drawer {
-    width: min(calc(80px + 620px), 100vw);
+    width: 620px;
+    transform: translateX(calc(-620px - var(--sidebar)));
+  }
+  .drawer.open {
+    transform: translateX(0);
   }
 }
 
@@ -589,7 +596,7 @@ input, select, textarea { font-family: var(--font); }
 
 @media (min-width: 768px) {
   .drawer-scroll {
-    padding: 56px 56px 0 calc(80px + 56px);
+    padding: 56px 56px 0 56px;
   }
 }
 
